@@ -10,6 +10,13 @@
 // db.books.find({"pages":{$in:[176,328,340]}})
 // db.books.find({"pages":{$nin:[176,328,340]}})
 
+// db.books.find({ $and: [{"pages" : {$eq: 224}}, {"year" : 1965}]})
 
+// db.books.find()
+
+// db.books.find({ $or: [{"pages" : {$eq: 384}}, {"year" : {$in: [1315, 1836,1958]}}]})
+
+db.books.find({ $nor: [{"pages" : {$eq: 384}}, {"year" : {$in: [1315, 1836,1958]}}]})
+// db.books.find({ "pages": {$not: {$lte: 384}} })
 
   
